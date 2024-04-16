@@ -29,16 +29,17 @@ class MainActivity : AppCompatActivity() {
 
         val loginButton: Button = findViewById(R.id.connect_with_microsoft_button)
         loginButton.setOnClickListener {
-            onConnectWithMicrosoft()
+            microsoftManager.onClickSignIn()
         }
 
+        val statusButton: Button = findViewById(R.id.get_status_button)
+        statusButton.setOnClickListener {
+            microsoftManager.getEnrollmentStatus()
+        }
     }
 
     private fun initMAM() {
         microsoftManager = MicrosoftManager(this, this@MainActivity)
     }
 
-    private fun onConnectWithMicrosoft() {
-        microsoftManager.onClickSignIn()
-    }
 }

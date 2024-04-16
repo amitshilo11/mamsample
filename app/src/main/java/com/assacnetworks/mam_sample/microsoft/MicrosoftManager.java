@@ -11,6 +11,7 @@ import com.microsoft.identity.client.IAuthenticationResult;
 import com.microsoft.identity.client.exception.MsalException;
 import com.microsoft.identity.client.exception.MsalIntuneAppProtectionPolicyRequiredException;
 import com.microsoft.identity.client.exception.MsalUserCancelException;
+import com.microsoft.intune.mam.client.app.MAMComponents;
 import com.microsoft.intune.mam.policy.MAMEnrollmentManager;
 
 import java.util.logging.Level;
@@ -28,6 +29,8 @@ public class MicrosoftManager {
     public MicrosoftManager(Context context, Activity activity) {
         this.context = context;
         this.activity = activity;
+
+        mEnrollmentManager = MAMComponents.get(MAMEnrollmentManager.class);
     }
 
     public void onClickSignIn() {
@@ -49,8 +52,19 @@ public class MicrosoftManager {
         thread.start();
     }
 
+    public void getEnrollmentStatus() {
+        try {
+            MAMEnrollmentManager.Result status = mEnrollmentManager.getRegisteredAccountStatus(mUserAccount.getUPN(), mUserAccount.getAADID());
+            showMessage(status.toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+            showMessage("mUserAccount is null");
+        }
+
+    }
+
     private void showMessage(final String message) {
-//        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 
     private class AuthCallback implements AuthenticationCallback {
