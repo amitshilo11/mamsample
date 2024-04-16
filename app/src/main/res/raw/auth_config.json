@@ -1,0 +1,14 @@
+{
+  "client_id" : "72a5bb44-fe6f-4d6e-a413-5dea75cc7e48",
+  "authorization_user_agent" : "DEFAULT",
+  "redirect_uri" : "msauth://com.assacnetworks.mam_sample/3ES1rVBjVTvssjWnglhmQbxa0lg%3D",
+  "authorities" : [
+    {
+      "type": "AAD",
+      "audience": {
+        "type": "AzureADandPersonalMicrosoftAccount",
+        "tenant_id": "common"
+      }
+    }
+  ]
+}

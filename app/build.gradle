@@ -45,7 +45,7 @@ dependencies {
     androidTestImplementation libs.androidx.espresso.core
 
     // Include MSAL
-//    implementation "com.microsoft.identity.client:msal:$msal_version"
+    implementation "com.microsoft.identity.client:msal:4.1.0"
     // Include the MAM SDK
     implementation files('MAMSDK/Microsoft.Intune.MAM.SDK.aar')
 }
