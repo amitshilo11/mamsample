@@ -17,13 +17,23 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/microsoft_logo_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/microsoft_logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subtitle_main_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Sample app for Microsoft Intune SDK \n By Amit Shilo Asscnetworks LTD."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/microsoft_logo_img" />
 
         <Button
             android:id="@+id/connect_with_microsoft_button"
@@ -33,7 +43,7 @@
             android:layout_marginTop="28dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/subtitle_main_activity" />
 
         <Button
             android:id="@+id/register_to_mam_callback_button"
