@@ -36,6 +36,16 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <Button
+            android:id="@+id/register_to_mam_callback_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register To MAM Callback"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/connect_with_microsoft_button" />
+
+        <Button
             android:id="@+id/get_status_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,7 +53,7 @@
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/connect_with_microsoft_button" />
+            app:layout_constraintTop_toBottomOf="@+id/register_to_mam_callback_button" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

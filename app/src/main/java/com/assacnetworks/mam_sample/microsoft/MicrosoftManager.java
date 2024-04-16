@@ -2,6 +2,7 @@ package com.assacnetworks.mam_sample.microsoft;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -12,7 +13,10 @@ import com.microsoft.identity.client.exception.MsalException;
 import com.microsoft.identity.client.exception.MsalIntuneAppProtectionPolicyRequiredException;
 import com.microsoft.identity.client.exception.MsalUserCancelException;
 import com.microsoft.intune.mam.client.app.MAMComponents;
+import com.microsoft.intune.mam.client.notification.MAMNotificationReceiverRegistry;
 import com.microsoft.intune.mam.policy.MAMEnrollmentManager;
+import com.microsoft.intune.mam.policy.notification.MAMEnrollmentNotification;
+import com.microsoft.intune.mam.policy.notification.MAMNotificationType;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -117,7 +121,7 @@ public class MicrosoftManager {
             // Register the account for MAM.
             mEnrollmentManager.registerAccountForMAM(upn, aadId, tenantId, authorityURL);
 
-//            displayMainView();
+            showMessage("Successfully signed in");
         }
 
         @Override
@@ -125,4 +129,5 @@ public class MicrosoftManager {
             showMessage("User cancelled auth attempt");
         }
     }
+
 }
