@@ -1,6 +1,7 @@
 package com.assacnetworks.mam_sample
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +17,15 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val loginButton: Button = findViewById(R.id.connect_with_microsoft_button)
+        loginButton.setOnClickListener {
+            onConnectWithMicrosoft()
+        }
+
+    }
+
+    private fun onConnectWithMicrosoft() {
+
     }
 }
