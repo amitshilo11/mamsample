@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initMAM() {
         microsoftManager = MicrosoftManager(this, this@MainActivity)
+        registerAuthCMAMCallback()
     }
 
     private fun registerAuthCMAMCallback() {

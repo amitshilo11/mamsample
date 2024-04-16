@@ -30,7 +30,8 @@ public class AuthenticationCallback implements MAMServiceAuthenticationCallback 
     public String acquireToken(@NonNull final String upn, @NonNull final String aadId, @NonNull final String resourceId) {
         try {
             // Create the MSAL scopes by using the default scope of the passed in resource id.
-            final String[] scopes = {resourceId + "/.default"};
+//            final String[] scopes = {resourceId + "/.default"};
+            final String[] scopes = {"User.Read"};
             final IAuthenticationResult result = MSALUtil.acquireTokenSilentSync(mContext, aadId, scopes);
             if (result != null)
                 return result.getAccessToken();
