@@ -30,7 +30,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data
                     android:host="com.assacnetworks.mam_sample"
-                    android:path="/3ES1rVBjVTvssjWnglhmQbxa0lg="
+                    android:path="/q7Y77AScosJIcG0WEEwxlIV6LJw="
                     android:scheme="msauth" />
             </intent-filter>
         </activity>

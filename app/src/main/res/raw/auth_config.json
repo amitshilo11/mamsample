@@ -1,7 +1,7 @@
 {
   "client_id" : "72a5bb44-fe6f-4d6e-a413-5dea75cc7e48",
   "authorization_user_agent" : "DEFAULT",
-  "redirect_uri" : "msauth://com.assacnetworks.mam_sample/3ES1rVBjVTvssjWnglhmQbxa0lg%3D",
+  "redirect_uri" : "msauth://com.assacnetworks.mam_sample/q7Y77AScosJIcG0WEEwxlIV6LJw%3D",
   "authorities" : [
     {
       "type": "AAD",
